@@ -15,8 +15,8 @@ RSpec.describe 'Sub String' do
             expect(substring_compare('hello greetings how when where', dictionary)).to eq("hello" => 1, "greetings" => 1)
         end
 
-        it 'will return with no errors when given duplicate content params' do
-            expect(substring_compare('hello hello', dictionary)).to eq("hello" => 1)
+        it "will return with no errors when input case doesn't match dictionary" do
+            expect(substring_compare('hEllO WeLcOme', dictionary)).to eq("hello" => 1, "welcome" => 2)
         end
 
         it 'will return with no errors when duplicate words exist in the dictionary' do
