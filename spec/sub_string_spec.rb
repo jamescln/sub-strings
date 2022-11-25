@@ -11,8 +11,8 @@ RSpec.describe 'Sub String' do
             expect(substring_compare('hello', dictionary)).to eq("hello" => 1)
         end
 
-        it 'will return hash of two key-value pairs when given two words' do
-            expect(substring_compare('hello greetings', dictionary)).to eq("hello" => 1, "greetings" => 1)
+        it 'will return hash of two key-value pairs when given multiple words' do
+            expect(substring_compare('hello greetings how when where', dictionary)).to eq("hello" => 1, "greetings" => 1)
         end
     end
 end

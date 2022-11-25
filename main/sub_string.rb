@@ -5,11 +5,9 @@ def substring_compare(content, dictionary)
     # will likely use the to_h method on nested array
     substring_tally = {}
     dictionary_tally = {}
-    substring_tally = substring_array.tally(substring_tally)
-    dictionary_tally = dictionary.tally(dictionary_tally)
-    binding.pry
-    common_words = substring_array.intersection(dictionary)
-    binding.pry
+    substring_tally = substring_array.tally(substring_tally).to_a
+    dictionary_tally = dictionary.tally(dictionary_tally).to_a
+    return substring_tally.intersection(dictionary_tally).to_h
 end
 
 test = substring_compare("hello test", ['hello', 'check']);
